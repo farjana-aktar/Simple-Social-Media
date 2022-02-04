@@ -1,5 +1,5 @@
 * {
-  margin: 0px;
+  margin-left: 5px;
   padding: 0px;
   box-sizing: border-box;
 }
@@ -13,7 +13,6 @@ h2 {
   color: blue;
 }
  
-
 h3 {
   font-size: 20px;
   display: inline-block;
@@ -40,8 +39,12 @@ h5{
   padding-top: 40px;
   align-items: center;
 }
-
-p {
+.photo{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+input {
   border-style: solid;
   border-radius: 30px;
   height: 40px;

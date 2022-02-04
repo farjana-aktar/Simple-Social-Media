@@ -1,39 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Link } from "react-router-dom";
+import About from './About'
+import Home from './Home'
 
 function App() {
   return (
     <div className="App">
-
       {/* <h1 style={{color: "red"}}> Profile App </h1> */}
       {/* <p style={{color: "darkblue"}}> React Profile App </p>  */}
+      <BrowserRouter>
+        <nav>
+          <div>
+            <h2>React Profile App</h2>
+          </div>
 
-      <nav>
-        <div>
-          <h2>React Profile App</h2>
-        </div>
+          <ul className="nav-links">
+            <li><Link to="/">Home</Link></li>
+            <li>Next</li>
+            <li>
+        
+              <Link to="/Farjana">About</Link>
+            </li>
+            <li>Back</li>
+          </ul>
+        </nav>
 
-        <ul className='nav-links'>
-          <li style={{color: "red"}}>Home</li>
-          <li>Add</li>
-          <li>About</li>
-          <li>Contrat</li>
+   
+      <Routes>
+          <Route exact path="/Farjana" element={<About />} />
+          <Route eaxt path="/" element={<Home/>}/>
+       </Routes>
 
-        </ul>
+      </BrowserRouter>
 
-      </nav>
-
-      <h1>Profile App</h1>
-      <h3>App Photo</h3>
-
-      <h4>Email</h4>
-      <p>Please, Enter your Email</p>
-
-      <h5>PassWord</h5>
-      <p>Please, Enter your Password xxx......</p>
-
-      <h6><u>Continue🤔 Remenber me</u></h6>
-  
     </div>
   );
 }
